@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #eff5fb;
+  --font-body: "Manrope", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Sora", "Manrope", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+  @apply m-0 min-h-screen text-slate-900 antialiased;
+  background: var(--bg);
+  font-family: var(--font-body);
+  line-height: 1.45;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  letter-spacing: -0.015em;
+}
+
+p,
+span,
+button,
+label,
+input {
+  font-family: var(--font-body);
+}
+
+#root {
+  @apply min-h-screen;
+}
+
+@layer components {
+  .panel {
+    @apply rounded-2xl border border-white/80 bg-white/80 shadow-[0_18px_60px_-32px_rgba(15,23,42,0.3)] backdrop-blur-xl;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.012em;
+}
+
+.marker-dot {
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  border: 2px solid rgba(255, 255, 255, 0.95);
+}
+
+.marker-selected {
+  box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.24);
+}
+
+.marker-healthy {
+  background: #22c55e;
+  box-shadow: 0 0 14px rgba(34, 197, 94, 0.65);
+}
+
+.marker-warning {
+  background: #eab308;
+  box-shadow: 0 0 14px rgba(234, 179, 8, 0.65);
+}
+
+.marker-critical {
+  background: #ef4444;
+  box-shadow: 0 0 16px rgba(239, 68, 68, 0.8);
+  animation: pulseCritical 2.6s ease-in-out infinite;
+}
+
+@keyframes pulseCritical {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.24);
+    opacity: 0.58;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.leaflet-container {
+  font-family: inherit;
+  background: #dbeafe;
+}
