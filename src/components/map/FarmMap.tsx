@@ -68,7 +68,7 @@ export default function FarmMap({
   selectedFarmId,
   scanPulse,
   onSelectFarm,
-  heightClass = "h-[540px]"
+  heightClass = "h-[420px] md:h-[540px]"
 }: FarmMapProps) {
   return (
     <div className={`relative overflow-hidden rounded-2xl border border-slate-200 ${heightClass}`}>

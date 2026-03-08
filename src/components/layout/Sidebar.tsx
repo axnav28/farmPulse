@@ -25,7 +25,7 @@ export default function Sidebar() {
   const { pathname } = useLocation();
 
   return (
-    <aside className="panel flex h-full min-h-full w-full flex-col px-4 py-5">
+    <aside className="panel flex h-full min-h-full w-full flex-col px-3 py-4 sm:px-4 sm:py-5">
       <div className="rounded-2xl border border-cyan-100 bg-gradient-to-r from-cyan-50 to-blue-50 p-3">
         <div className="flex items-center gap-3">
           <span className="rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 p-2 text-white shadow-[0_12px_24px_-12px_rgba(2,132,199,0.85)]">
@@ -33,12 +33,12 @@ export default function Sidebar() {
           </span>
           <div>
             <p className="text-[10px] font-semibold uppercase tracking-[0.17em] text-slate-500">Operations Console</p>
-            <p className="font-display text-[18px] font-bold leading-tight text-slate-900">National Command</p>
+            <p className="font-display text-[16px] font-bold leading-tight text-slate-900 sm:text-[18px]">National Command</p>
           </div>
         </div>
       </div>
 
-      <div className="mt-5 space-y-2">
+      <div className="mt-4 grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-1">
         {nav.map((item) => {
           const Icon = item.icon;
           const active = pathname === item.to;
@@ -64,14 +64,14 @@ export default function Sidebar() {
                 >
                   <Icon className="h-4 w-4" />
                 </span>
-                <span className="font-display text-[15px] font-semibold leading-tight text-slate-800">{item.label}</span>
+                <span className="font-display text-[14px] font-semibold leading-tight text-slate-800 sm:text-[15px]">{item.label}</span>
               </span>
             </Link>
           );
         })}
       </div>
 
-      <div className="mt-5 grid gap-3">
+      <div className="mt-4 hidden gap-3 lg:grid">
         <div className="rounded-xl border border-slate-200 bg-white p-3">
           <p className="font-display text-[11px] font-semibold uppercase tracking-[0.15em] text-slate-500">Live Snapshot</p>
           <div className="mt-2 space-y-2">
@@ -97,9 +97,9 @@ export default function Sidebar() {
         </div>
       </div>
 
-      <div className="mt-auto rounded-xl border border-slate-200 bg-slate-50 p-3">
+      <div className="mt-4 rounded-xl border border-slate-200 bg-slate-50 p-3 lg:mt-auto">
         <p className="font-display text-[11px] font-semibold uppercase tracking-[0.15em] text-slate-500">Mission Focus</p>
-        <p className="mt-1 text-[14px] font-semibold leading-snug text-slate-700">Detect high-risk crop zones early and trigger advisories faster.</p>
+        <p className="mt-1 text-[13px] font-semibold leading-snug text-slate-700 sm:text-[14px]">Detect high-risk crop zones early and trigger advisories faster.</p>
       </div>
     </aside>
   );
