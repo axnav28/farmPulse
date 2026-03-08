@@ -46,7 +46,7 @@ export default function RiskMapPage() {
             <p className="text-2xl font-bold tabular-nums text-rose-800">{highRisk.length}</p>
           </div>
         </div>
-        <div className="min-h-0 flex-1">
+        <div className="h-[420px] sm:h-[500px] xl:min-h-0 xl:flex-1">
           <FarmMap
             farms={farms}
             selectedFarmId={selectedFarm?.id ?? null}
@@ -59,7 +59,7 @@ export default function RiskMapPage() {
 
       <aside className="panel flex min-h-0 flex-col p-4">
         <h2 className="mb-3 text-[20px] font-bold text-slate-900">Critical Farm Queue</h2>
-        <div className="space-y-2 overflow-y-auto">
+        <div className="max-h-[320px] space-y-2 overflow-y-auto sm:max-h-[380px] xl:max-h-none">
           {queueItems.map((farm) => (
             <button
               key={farm.id}

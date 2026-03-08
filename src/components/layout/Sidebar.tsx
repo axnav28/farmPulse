@@ -71,7 +71,7 @@ export default function Sidebar() {
         })}
       </div>
 
-      <div className="mt-4 hidden gap-3 lg:grid">
+      <div className="mt-4 grid gap-3 md:grid-cols-2 lg:grid-cols-1">
         <div className="rounded-xl border border-slate-200 bg-white p-3">
           <p className="font-display text-[11px] font-semibold uppercase tracking-[0.15em] text-slate-500">Live Snapshot</p>
           <div className="mt-2 space-y-2">

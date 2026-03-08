@@ -11,7 +11,7 @@ export default function FarmIntelligencePage() {
     <div className="grid grid-cols-1 gap-4 xl:h-[calc(100vh-10.25rem)] xl:grid-cols-[360px_1fr] xl:overflow-hidden">
       <section className="panel flex min-h-0 flex-col p-4">
         <h2 className="mb-3 text-lg font-semibold text-slate-900">Farm Directory</h2>
-        <div className="min-h-0 flex-1 space-y-2 overflow-y-auto pr-1">
+        <div className="min-h-0 flex-1 max-h-[420px] space-y-2 overflow-y-auto pr-1 sm:max-h-[520px] xl:max-h-none">
           {tableData.map((farm) => (
             <button
               key={farm.id}
@@ -36,7 +36,7 @@ export default function FarmIntelligencePage() {
         </div>
       </section>
 
-      <section className="min-h-0 grid grid-rows-[auto_1fr_1fr] gap-4 pr-1">
+      <section className="min-h-0 space-y-4 pr-1 xl:grid xl:grid-rows-[auto_1fr_1fr] xl:gap-4 xl:space-y-0">
         {selectedFarm ? (
           <>
             <div className="panel p-4">
@@ -48,7 +48,7 @@ export default function FarmIntelligencePage() {
 
             <div className="panel flex min-h-0 flex-col p-4">
               <h4 className="mb-3 text-base font-semibold text-slate-900">NDVI Decline Curve (14 days)</h4>
-              <div className="min-h-0 flex-1">
+              <div className="h-56 min-h-0 flex-1 sm:h-64 xl:h-auto">
                 <ResponsiveContainer width="100%" height="100%">
                   <AreaChart data={selectedFarm.ndviTrend}>
                     <defs>
@@ -69,7 +69,7 @@ export default function FarmIntelligencePage() {
 
             <div className="panel flex min-h-0 flex-col p-4">
               <h4 className="mb-3 text-base font-semibold text-slate-900">Temperature Trend (14 days)</h4>
-              <div className="min-h-0 flex-1">
+              <div className="h-52 min-h-0 flex-1 sm:h-60 xl:h-auto">
                 <ResponsiveContainer width="100%" height="100%">
                   <LineChart data={selectedFarm.tempTrend}>
                     <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />

@@ -8,7 +8,7 @@ import { useFarmPulse } from "../hooks/useFarmPulse";
 
 export default function CommandCenterPage() {
   const { farms, selectedFarm, setSelectedFarmId, kpis, scanPulse } = useFarmPulse();
-  const [drawerCollapsed, setDrawerCollapsed] = useState(false);
+  const [drawerCollapsed, setDrawerCollapsed] = useState(true);
 
   const spark = [
     [
@@ -68,9 +68,9 @@ export default function CommandCenterPage() {
             animate={{ x: 0, opacity: 1 }}
             whileHover={{ scale: 1.02 }}
             onClick={() => setDrawerCollapsed(false)}
-            className="absolute right-4 top-4 z-[900] flex h-[calc(100%-2rem)] w-10 items-center justify-center rounded-2xl border border-cyan-200 bg-cyan-50/95 text-cyan-800 shadow-[0_12px_30px_-20px_rgba(14,165,233,0.8)] backdrop-blur"
+            className="absolute bottom-2 left-2 right-2 z-[900] flex h-10 items-center justify-center rounded-xl border border-cyan-200 bg-cyan-50/95 text-cyan-800 shadow-[0_12px_30px_-20px_rgba(14,165,233,0.8)] backdrop-blur md:bottom-auto md:left-auto md:right-4 md:top-4 md:h-[calc(100%-2rem)] md:w-10 md:rounded-2xl"
           >
-            <span className="[writing-mode:vertical-rl] rotate-180 text-xs font-semibold tracking-[0.16em] uppercase">
+            <span className="text-[11px] font-semibold tracking-[0.16em] uppercase md:[writing-mode:vertical-rl] md:rotate-180">
               Farm Profile
             </span>
           </motion.button>

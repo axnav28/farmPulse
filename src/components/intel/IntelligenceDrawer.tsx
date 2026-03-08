@@ -73,7 +73,7 @@ export default function IntelligenceDrawer({ farm, onClose }: DrawerProps) {
           animate={{ x: 0, opacity: 1 }}
           exit={{ x: 420, opacity: 0 }}
           transition={{ type: "spring", stiffness: 120, damping: 18 }}
-          className="panel absolute right-4 top-4 z-[900] h-[calc(100%-2rem)] w-[min(420px,calc(100%-2rem))] overflow-y-auto p-4"
+          className="panel absolute bottom-2 left-2 right-2 z-[900] h-[46%] overflow-y-auto p-3 sm:h-[52%] sm:p-4 md:bottom-4 md:left-auto md:right-4 md:top-4 md:h-[calc(100%-2rem)] md:w-[min(420px,calc(100%-2rem))]"
         >
           <div className="mb-4 flex items-start justify-between">
             <div>
